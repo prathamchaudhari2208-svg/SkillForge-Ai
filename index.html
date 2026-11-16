@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkillForge AI – Turn Your Ambition Into a Roadmap</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚒️</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b1a;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);--tx:#e8ecf8;--mu:#8f9ab8;--p:#8b5cf6;--c:#22d3ee;--g:linear-gradient(120deg,#8b5cf6,#22d3ee)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{background:radial-gradient(900px 500px at 15% -10%,#2a1b5e55,transparent),radial-gradient(800px 500px at 90% 10%,#0b4a6655,transparent),var(--bg);color:var(--tx);font:16px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:14px 5%;backdrop-filter:blur(14px);background:#070b1acc;border-bottom:1px solid var(--bd)}
+nav .l{font:700 20px 'Space Grotesk'}nav .l b{background:var(--g);-webkit-background-clip:text;color:transparent}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--mu)}nav ul a:hover{color:#fff}
+.btn{display:inline-block;border:0;cursor:pointer;padding:12px 24px;border-radius:10px;background:var(--g);color:#fff;font:500 15px Inter;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px #8b5cf666}.btn.o{background:transparent;border:1px solid var(--bd)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--c);outline-offset:2px}
+section{padding:80px 5%;max-width:1150px;margin:auto}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:10px}.sub{color:var(--mu);margin-bottom:34px;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;backdrop-filter:blur(10px)}
+.card h3{font-size:18px;margin-bottom:6px}.card p,.card li{color:var(--mu);font-size:14.5px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:90px}
+.hero h1{font-size:clamp(38px,6vw,68px)}.hero h1 span{background:var(--g);-webkit-background-clip:text;color:transparent}
+.hero p{color:var(--mu);margin:18px 0 28px;font-size:18px}.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.mock{padding:18px}.mock .bar{height:10px;border-radius:6px;background:var(--g);margin:10px 0;animation:g 2.4s ease-in-out infinite alternate}
+.mock .bar:nth-child(2){width:80%;animation-delay:.3s}.mock .bar:nth-child(3){width:55%;animation-delay:.6s}.mock .bar:nth-child(4){width:70%;animation-delay:.9s}
+@keyframes g{from{opacity:.35}to{opacity:1}}
+.ic{font-size:26px;margin-bottom:8px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}form .f{grid-column:span 2}
+label{font-size:13px;color:var(--mu);display:block;margin-bottom:4px}
+input,select{width:100%;background:#0d1330;border:1px solid var(--bd);color:var(--tx);border-radius:10px;padding:11px 12px;font:inherit}
+.key{margin-top:14px;font-size:13px;color:var(--mu)}
+.badge{display:inline-block;padding:4px 12px;border-radius:99px;font-size:12.5px;font-weight:500}
+.live{background:#10b98122;color:#34d399;border:1px solid #34d39966}.demo{background:#f59e0b22;color:#fbbf24;border:1px solid #fbbf2466}
+#res{display:none}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tabs button{background:var(--card);border:1px solid var(--bd);color:var(--mu);padding:8px 16px;border-radius:99px;cursor:pointer}
+.tabs button.on{background:var(--g);color:#fff;border-color:transparent}.pane{display:none}.pane.on{display:block}
+.pbar{height:10px;border-radius:9px;background:#ffffff14;overflow:hidden;margin:8px 0 18px}.pbar i{display:block;height:100%;width:0;background:var(--g);transition:width .4s}
+.chk{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;margin-bottom:8px;cursor:pointer;font-size:15px;color:var(--tx)}
+.chk input{width:auto;accent-color:var(--p)}.chk.done span{text-decoration:line-through;color:var(--mu)}
+.month{border-left:2px solid var(--p);padding-left:16px;margin-bottom:18px}.month h3{font-size:17px}
+.res a{color:var(--c)}ul.p{padding-left:18px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid var(--bd);padding:9px;text-align:left}th{color:var(--mu);font-weight:500}
+footer{border-top:1px solid var(--bd);padding:36px 5%;text-align:center;color:var(--mu);font-size:14px}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111a3d;border:1px solid var(--bd);padding:12px 20px;border-radius:10px;display:none;z-index:20}
+@media(max-width:800px){.hero{grid-template-columns:1fr}nav ul{display:none}form{grid-template-columns:1fr}form .f{grid-column:span 1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<nav><a class="l" href="#top">Skill<b>Forge</b> AI</a><ul><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#generator">Generator</a></li><li><a href="#docs">Documentation</a></li><li><a href="#portfolio">Portfolio</a></li></ul><a class="btn" href="#generator">Build my roadmap</a></nav>
+
+<section class="hero" id="top"><div><span class="badge live">Gemini-powered · Mini Project</span><h1 style="margin-top:14px">Turn your ambition into a <span>roadmap.</span></h1>
+<p>Tell SkillForge AI your dream career, skills and weekly hours. Get a six-month plan, a skills checklist, portfolio projects and interview prep in seconds.</p>
+<div class="row"><a class="btn" href="#generator">Generate my roadmap</a><a class="btn o" href="#how">See how it works</a></div></div>
+<div class="card mock"><b>Your 6-month plan</b><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><p style="margin-top:10px">Month 1: Foundations. Month 6: Job-ready portfolio.</p></div></section>
+
+<section id="how"><h2>How it works</h2><p class="sub">Four steps from a vague goal to a plan you can start on today.</p><div class="grid">
+<div class="card"><div class="ic">📝</div><h3>1. Describe yourself</h3><p>Career, level, current skills, weekly hours and goals.</p></div>
+<div class="card"><div class="ic">🧠</div><h3>2. AI analyses</h3><p>Gemini builds a structured JSON plan for your profile.</p></div>
+<div class="card"><div class="ic">🗺️</div><h3>3. Get your dashboard</h3><p>Roadmap, skills, projects, resources and interview tips.</p></div>
+<div class="card"><div class="ic">✅</div><h3>4. Track progress</h3><p>Tick off skills and download your plan.</p></div></div></section>
+
+<section id="features"><h2>Features</h2><p class="sub">Everything a student needs to plan a career path.</p><div class="grid">
+<div class="card"><h3>Live AI generation</h3><p>Real Gemini responses, validated as JSON.</p></div>
+<div class="card"><h3>Demo mode</h3><p>Works with no API key, clearly labelled as sample data.</p></div>
+<div class="card"><h3>Progress tracking</h3><p>Checklist progress saved in your browser.</p></div>
+<div class="card"><h3>Portfolio projects</h3><p>Three practical project ideas with tech stacks.</p></div>
+<div class="card"><h3>Download your plan</h3><p>Export as a text file or JSON.</p></div>
+<div class="card"><h3>Responsive</h3><p>Works on phones, tablets and desktops.</p></div></div></section>
+
+<section id="generator"><h2>AI Career Generator</h2><p class="sub">Fill in your profile. Without an API key, the app uses demo mode.</p>
+<div class="card"><form id="fm">
+<div><label for="career">Desired career</label><input id="career" required value="Full-Stack Developer"></div>
+<div><label for="lvl">Experience level</label><select id="lvl"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+<div class="f"><label for="sk">Existing skills (comma separated)</label><input id="sk" placeholder="HTML, Python, Git"></div>
+<div><label for="hrs">Weekly study hours</label><input id="hrs" type="number" min="1" max="80" value="10" required></div>
+<div><label for="gl">Career goals</label><input id="gl" placeholder="Get an internship by month 6"></div>
+<div class="f"><button class="btn" id="go" type="submit">Generate roadmap</button></div></form>
+<div class="key"><label for="apikey">Gemini API key (optional; kept in this tab's memory only, never saved)</label><input id="apikey" type="password" placeholder="Paste key for live AI, or leave empty for demo mode" autocomplete="off">
+<p style="margin-top:8px">Free key: aistudio.google.com/apikey. For a public site, route calls through a backend proxy (see README) and set PROXY_URL in the script.</p></div></div></section>
+
+<section id="res"><h2>Your dashboard</h2><span id="mode" class="badge"></span><p class="sub" id="sum" style="margin-top:12px"></p>
+<div class="tabs" id="tabs"></div>
+<div class="pane" id="p-road"></div><div class="pane" id="p-skills"></div><div class="pane" id="p-proj"></div><div class="pane" id="p-res"></div><div class="pane" id="p-int"></div>
+<div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="dl">Download plan (.txt)</button><button class="btn o" id="dlj">Download JSON</button></div></section>
+
+<section id="about"><h2>About the project</h2><p class="sub">SkillForge AI helps students who are unsure what to learn next. It turns a career goal into a structured, trackable plan using generative AI. Built for Mini Project 1 (AI-Based Application Development) and Mini Project 2 (AI Portfolio and Presentation).</p></section>
+
+<section id="docs"><h2>Academic documentation</h2><div class="grid">
+<div class="card"><h3>Problem</h3><p>Students lack a personalised, structured path to career skills.</p></div>
+<div class="card"><h3>Objectives</h3><p>Generate roadmaps, track progress, suggest projects and resources.</p></div>
+<div class="card"><h3>Requirements</h3><p>Functional: form, AI call, dashboard, checklist, export. Non-functional: responsive, secure, fast.</p></div>
+<div class="card"><h3>Methodology</h3><p>Agile, iterative sprints with manual testing per feature.</p></div></div>
+<h3 style="margin:26px 0 10px">Testing summary (record your own results before submitting)</h3><div class="card"><table><tr><th>Test</th><th>Expected</th></tr>
+<tr><td>Demo mode without key</td><td>Sample plan, amber demo badge</td></tr><tr><td>Valid Gemini key</td><td>Green live badge, AI plan</td></tr>
+<tr><td>Invalid API key</td><td>Error toast, demo fallback</td></tr><tr><td>Checklist tick</td><td>Progress bar updates, persists on reload</td></tr><tr><td>Download buttons</td><td>TXT and JSON files save</td></tr></table></div></section>
+
+<section id="portfolio"><h2>Digital portfolio</h2><div class="grid">
+<div class="card"><h3>Stack</h3><p>HTML, CSS, JavaScript, Google Gemini API, GitHub Pages.</p></div>
+<div class="card"><h3>Workflow</h3><p>Plan, design, build, test, deploy.</p></div>
+<div class="card"><h3>AI implementation</h3><p>Structured prompt, JSON response, validation and fallback.</p></div>
+<div class="card"><h3>Outcome</h3><p>A working AI web app deployed publicly.</p></div></div></section>
+
+<footer><b>SkillForge AI</b> · Turn Your Ambition Into a Roadmap.<br>Built by YOUR NAME · your-email@example.com · github.com/YOUR-USERNAME/skillforge-ai</footer>
+<div id="toast" role="status"></div>
+<script>
+const PROXY_URL="";             // optional: your backend/Cloudflare Worker URL (keeps key secret)
+const MODEL="gemini-2.0-flash"; // change if Google retires this model
+const $=s=>document.querySelector(s);let plan=null,mode="demo";
+function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",4000)}
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function demo(d){return{summary:`Sample roadmap for a ${d.career} (${d.level}), ${d.hours} hrs/week. This is demo data, not AI-generated.`,
+skills:["Core programming fundamentals","Git and GitHub","Data structures basics","APIs and HTTP","Databases (SQL)","Testing and debugging","Cloud deployment basics","Communication and teamwork"],
+roadmap:[["Foundations","Programming basics, Git, command line"],["Core skills","Frameworks and data structures"],["Build","APIs, databases, first real project"],["Deepen","Testing, security, performance"],["Portfolio","Ship 2 projects, write READMEs"],["Job-ready","Mock interviews, applications, networking"]].map((m,i)=>({month:i+1,title:m[0],focus:m[1]})),
+projects:[{name:"Personal portfolio site",desc:"Showcase your work on GitHub Pages.",stack:"HTML, CSS, JS"},{name:"Task tracker app",desc:"CRUD app with login and database.",stack:"React, Node, SQL"},{name:"AI study assistant",desc:"Chatbot that answers from your notes.",stack:"Gemini API, JS"}],
+resources:[{name:"freeCodeCamp",url:"https://www.freecodecamp.org"},{name:"MDN Web Docs",url:"https://developer.mozilla.org"},{name:"CS50 (Harvard)",url:"https://cs50.harvard.edu"},{name:"Roadmap.sh",url:"https://roadmap.sh"}],
+interview:["Explain your projects clearly with trade-offs.","Practise 2 coding problems a week.","Prepare STAR stories for behavioural questions.","Know your resume line by line.","Ask thoughtful questions at the end."]}}
+function prompt(d){return`You are a career mentor. Create a roadmap for a college student.
+Career: ${d.career}\nLevel: ${d.level}\nExisting skills: ${d.skills||"none"}\nWeekly hours: ${d.hours}\nGoals: ${d.goals||"not specified"}
+Return ONLY JSON: {"summary":string,"skills":[8 strings],"roadmap":[6 items {"month":number,"title":string,"focus":string}],"projects":[3 items {"name":string,"desc":string,"stack":string}],"resources":[{"name":string,"url":string}],"interview":[5 strings]}. Use only real, well-known resources and URLs.`}
+async function live(d,key){const body={contents:[{parts:[{text:prompt(d)}]}],generationConfig:{responseMimeType:"application/json",temperature:.7}};let r;
+if(PROXY_URL)r=await fetch(PROXY_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+else r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`,{method:"POST",headers:{"Content-Type":"application/json","x-goog-api-key":key},body:JSON.stringify(body)});
+if(!r.ok)throw new Error("API error "+r.status);const j=await r.json();const t=j.candidates[0].content.parts[0].text.replace(/```json|```/g,"").trim();const p=JSON.parse(t);
+if(!Array.isArray(p.roadmap)||!Array.isArray(p.skills)||!Array.isArray(p.projects))throw new Error("Unexpected AI format");
+p.resources=p.resources||[];p.interview=p.interview||[];return p}
+$("#fm").addEventListener("submit",async e=>{e.preventDefault();const b=$("#go");
+const d={career:$("#career").value.trim(),level:$("#lvl").value,skills:$("#sk").value,hours:$("#hrs").value,goals:$("#gl").value};const key=$("#apikey").value.trim();
+b.disabled=true;b.textContent="Generating…";
+try{if(key||PROXY_URL){plan=await live(d,key);mode="live"}else{plan=demo(d);mode="demo"}}
+catch(err){toast("Live AI failed ("+err.message+"). Showing demo data.");plan=demo(d);mode="demo"}
+b.disabled=false;b.textContent="Generate roadmap";render(d)});
+function render(d){$("#res").style.display="block";const m=$("#mode");m.className="badge "+(mode==="live"?"live":"demo");m.textContent=mode==="live"?"Live AI result (Gemini)":"Demo mode · sample data";
+$("#sum").textContent=plan.summary||"";const T=[["road","Roadmap"],["skills","Skills"],["proj","Projects"],["res","Resources"],["int","Interview"]];
+$("#tabs").innerHTML=T.map(t=>`<button data-t="${t[0]}">${t[1]}</button>`).join("");
+$("#p-road").innerHTML=plan.roadmap.map(r=>`<div class="month"><h3>Month ${esc(r.month)}: ${esc(r.title)}</h3><p style="color:var(--mu)">${esc(r.focus)}</p></div>`).join("");
+const k="sf-"+d.career+"-"+mode;let saved=[];try{saved=JSON.parse(localStorage.getItem(k)||"[]")}catch(e){}
+$("#p-skills").innerHTML=`<b id="pc"></b><div class="pbar"><i id="pb"></i></div>`+plan.skills.map((s,i)=>`<label class="chk"><input type="checkbox" ${saved.includes(i)?"checked":""}><span>${esc(s)}</span></label>`).join("");
+$("#p-proj").innerHTML=`<div class="grid">`+plan.projects.map(p=>`<div class="card"><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><p style="margin-top:8px;color:var(--c)">${esc(p.stack)}</p></div>`).join("")+`</div>`;
+$("#p-res").innerHTML=`<div class="card res"><ul class="p">`+plan.resources.map(r=>/^https?:\/\//.test(r.url)?`<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a></li>`:`<li>${esc(r.name)}</li>`).join("")+`</ul></div>`;
+$("#p-int").innerHTML=`<div class="card"><ul class="p">`+plan.interview.map(x=>`<li>${esc(x)}</li>`).join("")+`</ul></div>`;
+const prog=()=>{const a=[...document.querySelectorAll("#p-skills input")],n=a.filter(x=>x.checked).length;$("#pc").textContent=`${n} of ${a.length} skills done`;$("#pb").style.width=(a.length?n/a.length*100:0)+"%";
+try{localStorage.setItem(k,JSON.stringify(a.map((x,i)=>x.checked?i:-1).filter(i=>i>=0)))}catch(e){}a.forEach(x=>x.parentElement.classList.toggle("done",x.checked))};
+document.querySelectorAll("#p-skills input").forEach(x=>x.onchange=prog);prog();
+const tabs=[...document.querySelectorAll("#tabs button")];
+const show=b=>{tabs.forEach(x=>x.classList.remove("on"));document.querySelectorAll(".pane").forEach(x=>x.classList.remove("on"));b.classList.add("on");$("#p-"+b.dataset.t).classList.add("on")};
+tabs.forEach(b=>b.onclick=()=>show(b));show(tabs[0]);$("#res").scrollIntoView({behavior:"smooth"})}
+function save(name,txt,type){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([txt],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+$("#dl").onclick=()=>{if(!plan)return;save("skillforge-roadmap.txt",`SkillForge AI Roadmap (${mode==="live"?"Live AI":"Demo data"})\n\n${plan.summary}\n\nROADMAP\n`+plan.roadmap.map(r=>`Month ${r.month}: ${r.title} - ${r.focus}`).join("\n")+`\n\nSKILLS\n`+plan.skills.map(s=>"- "+s).join("\n")+`\n\nPROJECTS\n`+plan.projects.map(p=>`- ${p.name}: ${p.desc} [${p.stack}]`).join("\n")+`\n\nRESOURCES\n`+plan.resources.map(r=>`- ${r.name} ${r.url}`).join("\n")+`\n\nINTERVIEW TIPS\n`+plan.interview.map(s=>"- "+s).join("\n"),"text/plain")};
+$("#dlj").onclick=()=>{if(plan)save("skillforge-roadmap.json",JSON.stringify({mode,...plan},null,2),"application/json")};
+</script></body></html>
